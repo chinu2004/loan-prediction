@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <center>
+        <h1>{{ message }}</h1>
+        {% if amount %}
+            <h2>🏦 Suggested Loan Amount: ₹ {{ amount | round(2) }}</h2>
+
+            <!-- 📊 Plot Image -->
+            {% if plot_url %}
+                <img src="{{ url_for('static', filename=plot_url.split('static/')[-1]) }}" alt="Loan Plot" style="max-width: 600px; margin-top: 20px;">
+            {% endif %}
+        {% endif %}
+        <br><br>
+        <button>
+<a href="/" style="display: inline-block; width: 300px; padding: 10px 15px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 8px; font-size: 16px;">
+    Back
+</a>
+
+        </button>
+    </center>
+</body>
+</html>

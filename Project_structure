@@ -1,0 +1,15 @@
+loan_approval_prediction/
+│
+├── app.py
+├── best_clf.pkl
+├── clf2.pkl
+├── scale.pkl
+├── scale2nd.pkl
+├── databse
+├── static/
+│   └── style.css
+│
+└── templates/
+    ├── login.html
+    ├── index.html
+    └── result.html

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <center>
+       
+        <img src="{{ url_for('static', filename='images/loan.jpg') }}" class="img_1" alt="Loan Image">
+    </center>
+    <center>
+        <h1>🏦Loan Amount Prediction </h1>
+    </center>
+
+    <center>
+    <div class="form_container">
+    <form action="/predict" method="POST">
+        <table>
+            <tr>
+                <td>Number of Dependencies</td>
+                <td><input type="number" name="no_of_dependents" required></td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>
+                    <input type="radio" name="education" value="1" required> Graduate
+                    <input type="radio" name="education" value="0"> Un Graduate
+                </td>
+            </tr>
+            <tr>
+                <td>Self Employed</td>
+                <td>
+                    <input type="radio" name="self_employed" value="1" required> Yes
+                    <input type="radio" name="self_employed" value="0"> No
+                </td>
+            </tr>
+            <tr>
+                <td>Income Annum</td>
+                <td><input type="number" name="income_annum" required></td>
+            </tr>
+            <tr>
+                <td>Loan Term</td>
+                <td><input type="number" name="loan_term" required></td>
+            </tr>
+            <tr>
+                <td>Cibil Score</td>
+                <td><input type="number" name="cibil_score" required></td>
+            </tr>
+            <tr>
+                <td>Residential Assets Value</td>
+                <td><input type="number" name="residential_assets_value" required></td>
+            </tr>
+            <tr>
+                <td>Commercial Assets Value</td>
+                <td><input type="number" name="commercial_assets_value" required></td>
+            </tr>
+            <tr>
+                <td>Luxury Assets Value</td>
+                <td><input type="number" name="luxury_assets_value" required></td>
+            </tr>
+            <tr>
+                <td>Bank Asset Value</td>
+                <td><input type="number" name="bank_asset_value" required></td>
+            </tr>
+            <tr>
+                <td><input type="reset"></td>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    </center>
+</body>
+</html>
