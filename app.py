@@ -98,8 +98,8 @@ def predict():
 
         # Create a unique plot
         plot_id = uuid.uuid4().hex
-        plot_path = f'static/plot_{plot_id}.png'
-
+        plot_path = f'static/plots/plot_{plot_id}.png'  
+        
         plt.figure(figsize=(6, 5))
         plt.plot([0, 1], [0, amount], marker='o', label=f'₹{amount:,.2f}', color='green')
         plt.ylim(0, amount * 1.10)
